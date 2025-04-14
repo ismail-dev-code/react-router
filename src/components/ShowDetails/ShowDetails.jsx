@@ -1,9 +1,11 @@
 import React from "react";
-import { useLoaderData } from "react-router";
+import { useLoaderData, useParams } from "react-router";
 
 const ShowDetails = () => {
   const user = useLoaderData();
   const { website, name } = user;
+  const { userId } = useParams();
+  console.log(user);
   return (
     <div>
       <h2>user details here</h2>
